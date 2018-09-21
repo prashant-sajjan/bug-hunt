@@ -14,6 +14,7 @@ public abstract class BaseKeywordClass {
 	Report report;
 	DataUtil dataUtil;
 	String testName;
+	String reportPath;
 	protected WebDriver driver = null;
 	HomePage homePage = null;
 	
@@ -25,6 +26,7 @@ public abstract class BaseKeywordClass {
 		report = paramVO.getReport();
 		dataUtil = paramVO.getDataUtil();
 		testName = paramVO.getTestName();
+		reportPath = paramVO.getReportPath();
 		homePage = new HomePage();
 	}
 	

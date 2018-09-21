@@ -1,0 +1,71 @@
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Description</th>
+        <th scope="col">Actual Result</th>
+        <th scope="col">Step Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#steps}}
+      {{#stepPassed}}
+      <tr class="table-primary">
+        <th scope="row">{{stepNo}}</th>
+        <td>{{{desc}}}</td>
+        <td>{{{actualResult}}}</td>
+        <td>
+        {{^screenShotPath}}
+          <strong>PASS</strong>
+        {{/screenShotPath}}
+        {{#screenShotPath}}
+          <a href="{{{screenShotPath}}}">PASS</a>
+        {{/screenShotPath}}
+        </td>
+      </tr>
+      {{/stepPassed}}
+      {{#stepFailed}}
+      <tr class="table-danger">
+        <th scope="row">{{stepNo}}</th>
+        <td>{{{desc}}}</td>
+        <td>{{{actualResult}}}</td>
+        <td><strong>FAIL</strong></td>
+      </tr>
+      {{/stepFailed}}
+      {{#stepWithWarning}}
+      <tr class="table-warning">
+        <th scope="row">{{stepNo}}</th>
+        <td>{{{desc}}}</td>
+        <td>{{{actualResult}}}</td>
+        <td><strong>WARNING</strong></td>
+      </tr>
+      {{/stepWithWarning}}
+      {{/steps}}
+
+      <!--<tr class="table-active">
+          <th scope="row">Active</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">Default</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row">Success</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-danger">
+          <th scope="row">Danger</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">Warning</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>-->
+    </tbody>
+  </table>

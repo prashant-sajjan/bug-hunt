@@ -1,0 +1,5 @@
+{
+  "PROD": "http://PROD_URL.com",
+  "QA": "https://QA_URL.com",
+  "DEV": "https://DEV_URL.com"
+}

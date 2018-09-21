@@ -12,9 +12,8 @@ public class HomePage extends BasePO {
 	public static final By searchBtn = By.id("headerSearchButton");
 	
 	public HomePage openHomePage() {
-		String envURL = BugHuntConfig.instance().getBugHuntProperty("EnvironmentURL");
+		String envURL = BugHuntConfig.instance().getEnvironmentURL();
 		driver.get(envURL);
-		// Assert.assertTrue("The Home Depot".equals(driver.getTitle()));
 		return this;
 	}
 	

@@ -1,7 +1,10 @@
 package com.bughunt.keywords;
 
+import com.bughunt.domain.After;
+import com.bughunt.domain.Before;
 import com.bughunt.domain.ParameterVO;
 import com.bughunt.domain.StepResult;
+import com.bughunt.utils.DriverFactory;
 
 public class HomePageKeyword extends BaseKeywordClass {
 	
@@ -17,9 +20,15 @@ public class HomePageKeyword extends BaseKeywordClass {
 	
 	public void openHomePage1() {
 		homePage.openHomePage();
+		System.out.println(dataUtil.getData("Keyword"));
+		System.out.println(dataUtil.getData("Keyword"));
+		
+		System.out.println("Test Manager Data " +dataUtil.getTestManagerColumnVal("Browser"));
+		
 		report.addReportStep("Open Home Page", "Home Page is displayed", StepResult.PASS);
-		// report.addReportStep("FAIL Step", "Home Page is displayed", StepResult.FAIL);
-		// report.addReportStep("WARNING STEP", "Home Page is displayed", StepResult.WARNING);
+		report.addReportStep("Open Home Page", "Home Page is displayed", StepResult.PASS);
+		report.addReportStep("FAIL Step", "Home Page is displayed", StepResult.FAIL);
+		report.addReportStep("WARNING STEP", "Home Page is displayed", StepResult.WARNING);
 	}
 	
 	public void openHomePage2() {
