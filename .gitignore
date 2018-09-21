@@ -1,5 +1,8 @@
 target/
-src/main/resources/Driver/
+src/main/resources/Drivers/chromedriver
 .DS_Store
 *.class
 .DS_Store?
+/src/main/resources/Reports/**
+!/src/main/resources/Reports/**/
+!/src/main/resources/Reports/**/.gitkeep
