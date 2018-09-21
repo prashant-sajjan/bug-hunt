@@ -6,3 +6,5 @@ src/main/resources/Drivers/chromedriver
 /src/main/resources/Reports/**
 !/src/main/resources/Reports/**/
 !/src/main/resources/Reports/**/.gitkeep
+.project
+.classpath
