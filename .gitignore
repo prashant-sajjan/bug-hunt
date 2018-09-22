@@ -1,3 +1,4 @@
+
 target/
 bin/
 src/main/resources/Drivers/chromedriver
@@ -5,6 +6,7 @@ src/main/resources/Drivers/chromedriver
 *.class
 .DS_Store?
 /src/main/resources/Reports/**
+/src/main/resources/Reports/**/*.*
 !/src/main/resources/Reports/**/
 !/src/main/resources/Reports/**/.gitkeep
 .project
