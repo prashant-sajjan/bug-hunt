@@ -1,5 +1,5 @@
 {
-  "PROD": "http://PROD_URL.com",
+  "PROD": "https://www.homedepot.com",
   "QA": "https://QA_URL.com",
   "DEV": "https://DEV_URL.com"
 }

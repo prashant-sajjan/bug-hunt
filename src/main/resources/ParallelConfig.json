@@ -1,0 +1,23 @@
+[
+  {
+  	"ReportLabel": "Browser",
+  	"ReportValue": "Chrome",
+    "BrowserName": "Chrome",
+    "Version": "latest",
+    "Platform": "Windows"
+  },
+  {
+  	"ReportLabel": "Browser",
+  	"ReportValue": "IE",	
+    "BrowserName": "IE",
+    "Version": "11",
+    "Platform": "Windows"
+  },
+  {
+  	"ReportLabel": "Browser",
+  	"ReportValue": "FF",
+    "BrowserName": "FF",
+    "Version": "latest",
+    "Platform": "Windows"
+  }
+]

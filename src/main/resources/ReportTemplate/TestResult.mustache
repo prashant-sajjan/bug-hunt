@@ -1,0 +1,24 @@
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Test Case</th>
+        {{#headerLabels}}
+            <th scope="col">{{.}}</th>
+        {{/headerLabels}}
+        <th scope="col">Test Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#tests}}
+      <tr class="table-warning">
+        <th scope="row">{{id}}</th>
+        <td>{{{name}}}</td>
+         {{#summaryProps}}
+             <td>{{value}}</td>
+        {{/summaryProps}}
+        <td>{{{overAllStatus}}}</td>
+      </tr>
+      {{/tests}}
+    </tbody>
+  </table>

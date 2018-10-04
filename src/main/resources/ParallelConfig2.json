@@ -1,0 +1,51 @@
+[
+  {
+  	"reportLabel": "Browser",
+  	"reportValue": "Chrome",
+    "browserName": "Chrome",
+    "version": "latest",
+    "platform": "Windows"
+  },
+  {
+	"reportLabel": "Browser",
+  	"reportValue": "Chrome",
+    "browserName": "Chrome",
+    "version": "69",
+    "platform": "Windows"
+  },
+  {
+  	"reportLabel": "Browser",
+  	"reportValue": "Chrome",
+    "browserName": "Chrome",
+    "version": "67",
+    "platform": "Windows"
+  },
+  {
+  	"reportLabel": "Browser",
+  	"reportValue": "IE",
+    "browserName": "IE",
+    "version": "10",
+    "platform": "Windows"
+  },
+  {
+  	"reportLabel": "Browser",
+  	"reportValue": "IE",	
+    "browserName": "IE",
+    "version": "11",
+    "platform": "Windows"
+  },
+  {
+  	"reportLabel": "Browser",
+  	"reportValue": "Edge",
+    "browserName": "Edge",
+    "version": "latest",
+    "platform": "Windows"
+  },
+  {
+  	"reportLabel": "Browser",
+  	"reportValue": "FF",
+    "browserName": "FF",
+    "version": "latest",
+    "platform": "Windows"
+  }
+]

@@ -13,7 +13,7 @@ public class HomePage extends BasePO {
 	
 	public HomePage openHomePage() {
 		String envURL = BugHuntConfig.instance().getEnvironmentURL();
-		driver.get(envURL);
+		// driver.get(envURL);
 		return this;
 	}
 	

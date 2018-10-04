@@ -1,0 +1,29 @@
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Test Case</th>
+        {{#headerLabel}}
+            <th scope="col">{{.}}</th>
+        {{/headerLabel}}
+        <th scope="col">Test Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#tests}}
+          <tr class="table-warning">
+            <th scope="row">{{slNo}}</th>
+            <td>{{{name}}}</td>
+            <td>{{customColumnVal}}</td>
+            <td>
+            {{#testPassed}}
+              PASSED
+            {{/testPassed}}
+            {{^testPassed}}
+              FAILED
+            {{/testPassed}}
+            </td>
+          </tr>
+      {{/tests}}
+    </tbody>
+  </table>x

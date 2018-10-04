@@ -1,5 +1,6 @@
 package com.bughunt.utils;
 
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -34,6 +35,29 @@ public class DriverFactory {
 	}
 	
 	public void setWebDriver(String browser) {
+		WebDriver driver=null;
+		String basePath = System.getProperty("user.dir").replace("\\", "/");
+		String driversPath = basePath + BugHuntConstants.SRC_MAIN_RESOURCES_PATH + GlobalConstants.DRIVERS_FOLDER_NAME;
+		switch(browser) {
+		case "Chrome":
+			driver = getChromeDriver(driversPath);
+			break;
+		case "FireFox":
+			driver = getFirefoxDriver(driversPath);
+			break;
+		case "IE":
+			driver = getIEDriver(driversPath);
+			break;
+		default:
+			driver = getChromeDriver(driversPath);
+			break;
+		}
+		webDriver.set(driver);
+	}
+	
+	public void setWebDriverJsonConfig(Map<String, String> browserMap) {
+		System.out.println(browserMap);
+		String browser = "Chrome";
 		WebDriver driver=null;
 		String basePath = System.getProperty("user.dir").replace("\\", "/");
 		String driversPath = basePath + BugHuntConstants.SRC_MAIN_RESOURCES_PATH + GlobalConstants.DRIVERS_FOLDER_NAME;
