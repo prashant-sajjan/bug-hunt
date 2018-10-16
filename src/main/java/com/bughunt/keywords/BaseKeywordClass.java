@@ -38,7 +38,7 @@ public abstract class BaseKeywordClass {
 	@Before
 	public void setUp() {
 		if(!"ParallelMultiConfig".equals(BugHuntConfig.instance().getBugHuntProperty("ExecutionMode"))) {
-			DriverFactory.instance().setWebDriver("Chrome");
+			DriverFactory.instance().setWebDriver("Chrome", testName);
 		} else {
 			DriverFactory.instance().setWebDriverJsonConfig(jsonConfigProps);
 		}

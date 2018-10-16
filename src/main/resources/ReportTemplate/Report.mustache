@@ -10,32 +10,41 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
 
-  <title>Hello, world!</title>
+  <title>Test Report</title>
 </head>
 
 <body>
 
   {{#testObject}}
   <div class="card bg-light">
-  <div class="card-header font-weight-bold">Test Details</div>
-  <div class="card-body" style="padding:0">
-    <div class="container-fluid">
-    {{#props}}
-    <div class="row">
-      <div class="col-sm-3" style="background-color:yellow;color:black;">
-        {{label}}
+    <div class="card-header font-weight-bold">Test Details</div>
+    <div class="card-body" style="padding:0">
+      <div class="container-fluid">
+      {{#props}}
+      <div class="row">
+        <div class="col-sm-3" style="background-color:yellow;color:black;">
+          {{label}}
+        </div>
+        <div class="col-sm-9" style="background-color:pink;color:black">
+          {{{value}}}
+        </div>
       </div>
-      <div class="col-sm-9" style="background-color:pink;color:black">
-        {{{value}}}
-      </div>
+      {{/props}}
     </div>
-    {{/props}}
-  </div>
   </div>
 </div>
+
+{{#integrateVideo}}
+  <div>
+    <div class="card bg-light">
+      <div class="card-header font-weight-bold">Execution Video</div>
+    </div>
+      <script src="{{{videoURL}}}"></script></div>
+  </div>
+  {{/integrateVideo}}
 <div class="card bg-light">
   <div class="card-header font-weight-bold">Step Details</div>
-  </div>
+</div>
   {{#isMultiIteration}}
     {{>MultiIterationPartial.mustache}}
   {{/isMultiIteration}}

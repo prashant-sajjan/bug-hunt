@@ -1,5 +1,7 @@
 package com.bughunt.utils;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -12,6 +14,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.bughunt.config.BugHuntConfig;
 import com.bughunt.constants.BugHuntConstants;
@@ -27,14 +30,27 @@ public class DriverFactory {
 		
 	}
 	
+	private static boolean sauceExecution = false;
+	
 	public static DriverFactory instance() {
 		if(driverFactory == null) {
 			driverFactory = new DriverFactory();
+			if("true".equals(BugHuntConfig.instance().getBugHuntProperty("RunOnSauceLabs"))) {
+				sauceExecution = true;
+			}
 		}
 		return driverFactory;
 	}
 	
-	public void setWebDriver(String browser) {
+	public void setWebDriver(String browser, String testName) {
+		if(!sauceExecution) {
+			setLocalWebDriver(browser);
+		} else {
+			setSauceWebDriver("Chrome", testName);
+		}
+	}
+
+	private void setLocalWebDriver(String browser) {
 		WebDriver driver=null;
 		String basePath = System.getProperty("user.dir").replace("\\", "/");
 		String driversPath = basePath + BugHuntConstants.SRC_MAIN_RESOURCES_PATH + GlobalConstants.DRIVERS_FOLDER_NAME;
@@ -53,29 +69,29 @@ public class DriverFactory {
 			break;
 		}
 		webDriver.set(driver);
+	}
+	
+	private void setSauceWebDriver(String browser, String testCaseName) {
+	    try {
+	    		String URL = BugHuntConfig.instance().getBugHuntProperty("SauceLabURL");
+			WebDriver driver=null;
+			DesiredCapabilities caps = DesiredCapabilities.chrome();
+		    caps.setCapability("platform", "Windows 10");
+		    caps.setCapability("version", "latest");
+		    caps.setCapability("name",testCaseName);
+			driver = new RemoteWebDriver(new URL(URL), caps);
+			webDriver.set(driver);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}
 	}
 	
 	public void setWebDriverJsonConfig(Map<String, String> browserMap) {
 		System.out.println(browserMap);
 		String browser = "Chrome";
-		WebDriver driver=null;
-		String basePath = System.getProperty("user.dir").replace("\\", "/");
-		String driversPath = basePath + BugHuntConstants.SRC_MAIN_RESOURCES_PATH + GlobalConstants.DRIVERS_FOLDER_NAME;
-		switch(browser) {
-		case "Chrome":
-			driver = getChromeDriver(driversPath);
-			break;
-		case "FireFox":
-			driver = getFirefoxDriver(driversPath);
-			break;
-		case "IE":
-			driver = getIEDriver(driversPath);
-			break;
-		default:
-			driver = getChromeDriver(driversPath);
-			break;
-		}
-		webDriver.set(driver);
+		setLocalWebDriver(browser);
 	}
 	
 	public WebDriver getWebDriver() {
