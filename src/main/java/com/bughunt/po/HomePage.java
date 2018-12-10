@@ -14,18 +14,19 @@ public class HomePage extends BasePO {
 	public HomePage openHomePage() {
 		String envURL = BugHuntConfig.instance().getEnvironmentURL();
 		// driver.get(envURL);
+		
 		return this;
 	}
 	
 	public PlpPage searchKeyword() {
-		wh.sendKeys(searchTxtBox, "hammer");
-		wh.click(searchBtn);
+		// wh.sendKeys(searchTxtBox, "hammer");
+		// wh.click(searchBtn);
 		return new PlpPage();
 	}
 	
 	public PipPage searchSKU() {
-		wh.sendKeys(searchTxtBox, "205386272");
-		wh.click(searchBtn);
+		// wh.sendKeys(searchTxtBox, "205386272");
+		// wh.click(searchBtn);
 		return new PipPage();
 	}
 }

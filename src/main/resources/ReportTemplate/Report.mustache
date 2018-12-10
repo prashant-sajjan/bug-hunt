@@ -16,16 +16,19 @@
 <body>
 
   {{#testObject}}
+   <div class="card bg-light">
+    <div class="card-header font-weight-bold" style="text-align:center;background-color:gray">Test Execution Report</div>
+  </div>
   <div class="card bg-light">
     <div class="card-header font-weight-bold">Test Details</div>
     <div class="card-body" style="padding:0">
       <div class="container-fluid">
       {{#props}}
       <div class="row">
-        <div class="col-sm-3" style="background-color:yellow;color:black;">
+        <div class="col-sm-3" style="background-color:#212529;color:white;font-weight:500">
           {{label}}
         </div>
-        <div class="col-sm-9" style="background-color:pink;color:black">
+        <div class="col-sm-9" style="background-color:gray;color:black;font-weight:500">
           {{{value}}}
         </div>
       </div>
@@ -42,7 +45,7 @@
       <script src="{{{videoURL}}}"></script></div>
   </div>
   {{/integrateVideo}}
-<div class="card bg-light">
+<div class="card"  style="background-color:#d6d8db">
   <div class="card-header font-weight-bold">Step Details</div>
 </div>
   {{#isMultiIteration}}

@@ -17,7 +17,7 @@
 
   {{#testObject}}
   <div class="card bg-light">
-    <div class="card-header font-weight-bold">Automation Summary Report</div>
+    <div class="card-header font-weight-bold" style="text-align:center;background-color:gray">Automation Summary Report</div>
   </div>
 
   <div class="card bg-light">
@@ -26,10 +26,10 @@
       <div class="container-fluid">
       {{#summaryHeaders}}
       <div class="row">
-        <div class="col-sm-3" style="background-color:yellow;color:black;">
+        <div class="col-sm-3" style="background-color:#212529;color:white;font-weight:500">
           {{label}}
         </div>
-        <div class="col-sm-9" style="background-color:pink;color:black">
+        <div class="col-sm-9" style="background-color:gray;color:black;font-weight:500">
           {{{value}}}
         </div>
       </div>

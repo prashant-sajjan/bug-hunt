@@ -1,10 +1,7 @@
 package com.bughunt.keywords;
 
-import com.bughunt.domain.After;
-import com.bughunt.domain.Before;
 import com.bughunt.domain.ParameterVO;
 import com.bughunt.domain.StepResult;
-import com.bughunt.utils.DriverFactory;
 
 public class SearchKeyword extends BaseKeywordClass {
 
@@ -16,20 +13,41 @@ public class SearchKeyword extends BaseKeywordClass {
 		super(paramVO);
 	}
 	
+	public void searchKeyword() {
+		homePage.searchKeyword();
+	}
+	
 	public void searchKeyword1() {
-		report.addReportStep("PASS STEP", "Search Keyword 1", StepResult.PASS);
+		if(null!=jsonConfigProps && null!=jsonConfigProps.get("Device")) {
+			report.addReportStep("PASS STEP", "Search Keyword 1 " +jsonConfigProps.get("Device"), StepResult.PASS);
+		} else {
+			report.addReportStep("PASS STEP", "Search Keyword 1 ", StepResult.PASS);
+		}
+		
 	}
 	
 	public void searchKeyword2() { 
-	    report.addReportStep("PASS STEP", "Search Keyword 2", StepResult.PASS);
+		if(null!=jsonConfigProps && null!=jsonConfigProps.get("Device")) {
+			report.addReportStep("PASS STEP", "Search Keyword 2 " +jsonConfigProps.get("Device"), StepResult.PASS);
+		} else {
+			report.addReportStep("PASS STEP", "Search Keyword 2 ", StepResult.PASS);
+		}
 	}
 
 	public void searchKeyword3() { 
-	    report.addReportStep("PASS STEP", "Search Keyword 3", StepResult.PASS);
+		if(null!=jsonConfigProps && null!=jsonConfigProps.get("Device")) {
+			report.addReportStep("PASS STEP", "Search Keyword 3 " +jsonConfigProps.get("Device"), StepResult.PASS);
+		} else {
+			report.addReportStep("PASS STEP", "Search Keyword 3 ", StepResult.PASS);
+		}
 	}
 
 	public void searchKeyword4() { 
-	    report.addReportStep("PASS STEP", "Search Keyword 4", StepResult.PASS);
+		if(null!=jsonConfigProps && null!=jsonConfigProps.get("Device")) {
+			report.addReportStep("PASS STEP", "Search Keyword 4 " +jsonConfigProps.get("Device"), StepResult.PASS);
+		} else {
+			report.addReportStep("PASS STEP", "Search Keyword 4", StepResult.PASS);
+		}
 	}
 
 	public void searchKeyword5() { 

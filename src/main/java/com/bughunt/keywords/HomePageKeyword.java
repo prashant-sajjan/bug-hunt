@@ -1,11 +1,7 @@
 package com.bughunt.keywords;
 
-import com.bughunt.config.BugHuntConfig;
-import com.bughunt.domain.After;
-import com.bughunt.domain.Before;
 import com.bughunt.domain.ParameterVO;
 import com.bughunt.domain.StepResult;
-import com.bughunt.utils.DriverFactory;
 
 public class HomePageKeyword extends BaseKeywordClass {
 	
@@ -17,12 +13,24 @@ public class HomePageKeyword extends BaseKeywordClass {
 	
 	boolean failTest = false;
 	
+	public void openHomePageNew() { 
+
+	}
+	
 	public HomePageKeyword(ParameterVO paramVO) {
 		super(paramVO);
 		
 		String str = paramVO.getTestName().replaceAll("Search for keyword", "");
 		int testCaseIndex = Integer.valueOf(str);
 		failTest = testCaseIndex % 2 == 0;
+	}
+	
+	public void openHomePage() { 
+	    homePage.openHomePage();
+	    report.addReportStep("PASS STEP", "Home Page 2 is displayed" , StepResult.PASS);
+	    report.addReportStep("FAIL STEP", "Search Keyword 1 ", StepResult.FAIL);
+		report.addReportStep("WARNING STEP", "Search Keyword 1 ", StepResult.WARNING);
+	   
 	}
 	
 	public void openHomePage1() { 

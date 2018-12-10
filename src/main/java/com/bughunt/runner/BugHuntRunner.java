@@ -15,6 +15,7 @@ public class BugHuntRunner {
 
 	public static void main(String [] args) throws InterruptedException, ParseException {
 		ExecutionManager.instance().triggerExecution();
+		System.out.println("Automation execution completed");
 		// createSearchKeywords();
 		// createHomePageKeywords();
 	}

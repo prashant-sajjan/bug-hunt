@@ -2,22 +2,22 @@
   {
   	"ReportLabel": "Browser",
   	"ReportValue": "Chrome",
-    "BrowserName": "Chrome",
-    "Version": "latest",
-    "Platform": "Windows"
+    "browserName": "Chrome",
+    "version": "latest",
+    "platform": "Windows"
   },
   {
   	"ReportLabel": "Browser",
-  	"ReportValue": "IE",	
-    "BrowserName": "IE",
-    "Version": "11",
-    "Platform": "Windows"
+  	"ReportValue": "Edge",
+    "browserName": "Edge",
+    "version": "latest",
+    "platform": "Windows"
   },
   {
   	"ReportLabel": "Browser",
   	"ReportValue": "FF",
-    "BrowserName": "FF",
-    "Version": "latest",
-    "Platform": "Windows"
+    "browserName": "FF",
+    "version": "latest",
+    "platform": "Windows"
   }
 ]
