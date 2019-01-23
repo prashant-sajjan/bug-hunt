@@ -35,7 +35,7 @@ public class DriverFactory {
 	public static DriverFactory instance() {
 		if(driverFactory == null) {
 			driverFactory = new DriverFactory();
-			if("true".equals(BugHuntConfig.instance().getBugHuntProperty("RunOnSauceLabs"))) {
+			if("true".equals(BugHuntConfig.getBugHuntProperty("RunOnSauceLabs"))) {
 				sauceExecution = true;
 			}
 		}
@@ -46,7 +46,7 @@ public class DriverFactory {
 		if(!sauceExecution) {
 			setLocalWebDriver(browser);
 		} else {
-			setSauceWebDriver("Chrome", testName);
+			setSauceWebDriver(browser, testName);
 		}
 	}
 
@@ -73,7 +73,7 @@ public class DriverFactory {
 	
 	private void setSauceWebDriver(String browser, String testCaseName) {
 	    try {
-	    		String URL = BugHuntConfig.instance().getBugHuntProperty("SauceLabURL");
+	    	String URL = BugHuntConfig.getBugHuntProperty("SauceLabURL");
 			WebDriver driver=null;
 			DesiredCapabilities caps = DesiredCapabilities.chrome();
 		    caps.setCapability("platform", "Windows 10");
@@ -88,10 +88,13 @@ public class DriverFactory {
 		}
 	}
 	
-	public void setWebDriverJsonConfig(Map<String, String> browserMap) {
-		System.out.println(browserMap);
-		String browser = "Chrome";
-		setLocalWebDriver(browser);
+	public void setWebDriverJsonConfig(Map<String, String> browserMap, String testName) {
+		String browser = browserMap.get("browserName");
+		if(!sauceExecution) {
+			setLocalWebDriver(browser);
+		} else {
+			setSauceWebDriver(browser, testName);
+		}
 	}
 	
 	public WebDriver getWebDriver() {

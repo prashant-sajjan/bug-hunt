@@ -4,7 +4,7 @@
   	"ReportValue": "iPhone",
     "Device": "iPhone",
     "Version": "latest",
-    "Platform": "Windows",
+    "Platform": "Mac",
     "GroupID": "iPhone"
   },
   {
@@ -12,40 +12,8 @@
   	"ReportValue": "iPhone",
     "Device": "iPhone",
     "Version": "latest",
-    "Platform": "Windows",
+    "Platform": "Mac",
     "GroupID": "iPhone"
-  },
-  {
-  	"ReportLabel": "Browser",
-  	"ReportValue": "iPhone",
-    "Device": "iPhone",
-    "Version": "latest",
-    "Platform": "Windows",
-    "GroupID": "iPhone"
-  },
-  {
-  	"ReportLabel": "Browser",
-  	"ReportValue": "iPhone",
-    "Device": "iPhone",
-    "Version": "latest",
-    "Platform": "Windows",
-    "GroupID": "iPhone"
-  },
-  {
-  	"ReportLabel": "Browser",
-  	"ReportValue": "Samsung",
-    "Device": "Samsung",
-    "Version": "latest",
-    "Platform": "Windows",
-    "GroupID": "Samsung"
-  },
-  {
-  	"ReportLarbel": "Browser",
-  	"ReportValue": "Samsung",	
-    "Device": "Samsung",
-    "Version": "11",
-    "Platform": "Windows",
-    "GroupID": "Samsung"
   },
    {
   	"ReportLabel": "Browser",

@@ -9,14 +9,14 @@
   {
   	"ReportLabel": "Browser",
   	"ReportValue": "Edge",
-    "browserName": "Edge",
+    "browserName": "Chrome",
     "version": "latest",
     "platform": "Windows"
   },
   {
   	"ReportLabel": "Browser",
   	"ReportValue": "FF",
-    "browserName": "FF",
+    "browserName": "Chrome",
     "version": "latest",
     "platform": "Windows"
   }

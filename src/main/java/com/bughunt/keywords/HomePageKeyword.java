@@ -5,12 +5,11 @@ import com.bughunt.domain.StepResult;
 
 public class HomePageKeyword extends BaseKeywordClass {
 	
-	private int stepCounter = 0;
-	
 	public HomePageKeyword() {
 		super();
 	}
 	
+	private int stepCounter = 0;
 	boolean failTest = false;
 	
 	public void openHomePageNew() { 
@@ -25,13 +24,13 @@ public class HomePageKeyword extends BaseKeywordClass {
 		failTest = testCaseIndex % 2 == 0;
 	}
 	
-	public void openHomePage() { 
+	/*public void openHomePage() { 
 	    homePage.openHomePage();
 	    report.addReportStep("PASS STEP", "Home Page 2 is displayed" , StepResult.PASS);
 	    report.addReportStep("FAIL STEP", "Search Keyword 1 ", StepResult.FAIL);
 		report.addReportStep("WARNING STEP", "Search Keyword 1 ", StepResult.WARNING);
 	   
-	}
+	}*/
 	
 	public void openHomePage1() { 
 	    homePage.openHomePage();

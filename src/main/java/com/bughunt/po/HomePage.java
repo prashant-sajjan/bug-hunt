@@ -12,8 +12,8 @@ public class HomePage extends BasePO {
 	public static final By searchBtn = By.id("headerSearchButton");
 	
 	public HomePage openHomePage() {
-		String envURL = BugHuntConfig.instance().getEnvironmentURL();
-		// driver.get(envURL);
+		String envURL = BugHuntConfig.getEnvironmentURL();
+		driver.get(envURL);
 		
 		return this;
 	}
@@ -25,7 +25,7 @@ public class HomePage extends BasePO {
 	}
 	
 	public PipPage searchSKU() {
-		// wh.sendKeys(searchTxtBox, "205386272");
+		// wh.sendKeys(searchTxtBox, "sku");
 		// wh.click(searchBtn);
 		return new PipPage();
 	}

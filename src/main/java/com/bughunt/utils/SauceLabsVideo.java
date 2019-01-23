@@ -14,7 +14,7 @@ public class SauceLabsVideo implements VideoCapture {
 		try {
 			SessionId session = ((RemoteWebDriver) DriverFactory.instance().getWebDriver()).getSessionId();
 			String sessionId = session.toString();
-		    String sauceUsernameAccessKey =	BugHuntConfig.instance().getBugHuntProperty("SauceLabURL").split("@")[0].replace("http://", "");
+		    String sauceUsernameAccessKey =	BugHuntConfig.getBugHuntProperty("SauceLabURL").split("@")[0].replace("http://", "");
 		    String authToken = SecurityUtils.HMAC_MD5_encode(sauceUsernameAccessKey, sessionId);
 		    videoUrl = "https://saucelabs.com/video-embed/"+sessionId+".js?auth=" +authToken;
 		} catch(Exception ex) {

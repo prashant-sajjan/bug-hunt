@@ -12,6 +12,7 @@ import com.bughunt.po.HomePage;
 import com.bughunt.reports.Report;
 import com.bughunt.util.DataUtil;
 import com.bughunt.utils.DriverFactory;
+import com.bughunt.utils.WebDriverHelper;
 
 public abstract class BaseKeywordClass {
 	Report report;
@@ -19,6 +20,7 @@ public abstract class BaseKeywordClass {
 	String testName;
 	String reportPath;
 	protected WebDriver driver = null;
+	protected WebDriverHelper wh;
 	HomePage homePage = null;
 	Map<String, String> jsonConfigProps = null;
 	
@@ -33,17 +35,25 @@ public abstract class BaseKeywordClass {
 		reportPath = paramVO.getReportPath();
 		jsonConfigProps = paramVO.getJsonConfigProps();
 		homePage = new HomePage();
+		
+		driver = DriverFactory.instance().getWebDriver();
+		wh = new WebDriverHelper();
 	}
 	
 	@Before
 	public void setUp() {
-		if(!"ParallelMultiConfig".equals(BugHuntConfig.instance().getBugHuntProperty("ExecutionMode"))) {
-			DriverFactory.instance().setWebDriver("Chrome", testName);
+		String executionMode = BugHuntConfig.getBugHuntProperty("ExecutionMode");
+		if("Sequential".equals(executionMode) || "Parallel".equals(executionMode)) {
+			String browser = null;
+			if(!"true".equals(BugHuntConfig.getBugHuntProperty("UseTestManagerBrowser"))) {
+				 browser = BugHuntConfig.getBugHuntProperty("Browser");
+			} else {
+				 browser = dataUtil.getTestManagerColumnVal("Browser");
+			}
+			DriverFactory.instance().setWebDriver("browser", testName);
 		} else {
-			DriverFactory.instance().setWebDriverJsonConfig(jsonConfigProps);
+			DriverFactory.instance().setWebDriverJsonConfig(jsonConfigProps, testName);
 		}
-		
-		driver = DriverFactory.instance().getWebDriver();
 	}
 	
 	@After
