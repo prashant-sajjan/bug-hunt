@@ -8,7 +8,7 @@ From your repositories folder on your local machine:
 
   - git clone https://github.com/prashant-sajjan/bug-hunt.git
   - If using selenium add drivers for chrome, IE and Firefox in src\main\resources\Drivers
-  - import buh-hunt project as maven project in any JAVA IDE of your choice
+  - import bug-hunt project as maven project in any JAVA IDE of your choice
 
 ## Running the tests
 - Select tests to be executed in TestManager.xls
