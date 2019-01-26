@@ -1,4 +1,4 @@
-# Bug Hunt Automation Framework (Keyword Driven Framework)
+# Bug Hunt Framework (Keyword Driven Framework)
 
 Bug Hunt Framework is a Java based keyword driven framework which supports any Java based automation tool.
 It supports executing test cases in parallel, running test cases on multiple browsers/ devices.
