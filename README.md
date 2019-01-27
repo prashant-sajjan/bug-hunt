@@ -21,7 +21,7 @@ From your repositories folder on your local machine:
 - Command Line - mvn clean compile exec:java -Dexec.mainClass="com.bughunt.runner.BugHuntRunner"
 
 ## Automating Tests
-- Follow steps in [User_Guide.doc](../master/User_Guide.docx)
+- Follow steps in [User_Guide.doc](https://github.com/prashant-sajjan/bug-hunt/blob/master/User_Guide.docx)
 
 
 
