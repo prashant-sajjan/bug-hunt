@@ -1,1 +1,15 @@
 theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-seo-tag
+
+# Name of website
+title: Keyword Driven Framework
+
+# Short description of your site
+description: A Keyword Driven Automation Framework with support for parallel execution and multi browser/device execution
+
+author:
+  name: Prashant Sajjan
+
+repository: prashant-sajjan/bug-hunt
