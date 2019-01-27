@@ -1,3 +1,8 @@
+<!--
+  Title: Keyword Driven Automation Framework
+  Description: A Keyword Driven Automation Framework with support for parallel execution and multi browser/device execution
+  Author: Prashant Sajjan
+  -->
 # Bug Hunt Automation Framework (Keyword Driven Framework)
 
 Bug Hunt Framework is a Java based keyword driven framework which supports any Java based automation tool.
@@ -16,7 +21,7 @@ From your repositories folder on your local machine:
 - Command Line - mvn clean compile exec:java -Dexec.mainClass="com.bughunt.runner.BugHuntRunner"
 
 ## Automating Tests
-- Follow steps in User_Guide.doc
+- Follow steps in [User_Guide.doc](../blob/master/User_Guide.docx)
 
 
 
