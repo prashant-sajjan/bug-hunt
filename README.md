@@ -1,13 +1,21 @@
 <!--
-  Title: Keyword Driven Automation Framework
-  Description: A Keyword Driven Automation Framework with support for parallel execution and multi browser/device execution
+  Title: Keyword Driven Selenium Automation Framework
+  Description: A Keyword Driven Selenium Automation Framework
   Author: Prashant Sajjan
   -->
 # Bug Hunt Automation Framework (Keyword Driven Framework)
 
-Bug Hunt Framework is a Java based keyword driven framework which supports any Java based automation tool.
-It supports executing test cases in parallel, running test cases on multiple browsers/ devices.
-
+Bug Hunt Framework is a Java based keyword driven framework. It supports below features:
+* Selenium Automation
+* Multi Thread Execution
+* Multi Browser Execution 
+* Multi Device Execution
+* Reporting with Screenshots for PASS/FAIL steps
+* Sauce Lab video integration
+* Failed Test Execution
+* Rerun failed test
+* Data Driven Testing
+* Support for any Java based tool
 ## Installation
 From your repositories folder on your local machine:
 
