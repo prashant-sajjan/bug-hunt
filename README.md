@@ -19,8 +19,8 @@ From your repositories folder on your local machine:
 - Select tests to be executed in TestManager.xls
 - Running through IDE - Open BugHuntRunner.java and run as Java application
 - Command Line - Run below commands
-  ..*mvn clean (First time only)
-  ..*mvn compile exec:java -Dexec.mainClass="com.bughunt.runner.BugHuntRunner"
+  *mvn clean (First time only)
+  *mvn compile exec:java -Dexec.mainClass="com.bughunt.runner.BugHuntRunner"
 
 ## Automating Tests
 - Follow steps in [User_Guide.doc](https://github.com/prashant-sajjan/bug-hunt/blob/master/User_Guide.docx)
