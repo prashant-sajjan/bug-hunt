@@ -33,5 +33,12 @@ From your repositories folder on your local machine:
 ## Automating Tests
 - Follow steps in [User_Guide.doc](https://github.com/prashant-sajjan/bug-hunt/blob/master/User_Guide.docx)
 
+## Contribute
+* Fork Bug Hunt Library Project - https://github.com/prashant-sajjan/bug-hunt-lib.git
+* Import bug-hunt-lib project and comment bughunt-lib dependency in bug-hunt project
+* Add new feature/ fix issue
+* Send me a pull request
+
+
 
 
